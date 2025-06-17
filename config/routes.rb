@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     get '/events',      to: 'tabs#events'
     get '/calendar',    to: 'tabs#calendar'
     get '/contact',     to: 'tabs#contact'
+    get '/temple',      to: 'tabs#temple'
     get '/leadership',  to: 'tabs#leadership'
     get '/login',       to: 'sessions#new'
     get '/login',       to: 'sessions#new'

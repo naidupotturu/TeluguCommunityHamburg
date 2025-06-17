@@ -13,60 +13,141 @@
     </div>
 
     <!-- Right Side Calendar -->
-    <div class="col-md-9" style="height: 600px; overflow-y: auto;">
-      <% (2015..2025).reverse_each do |year| %>
+    <div class="col-md-9" style="min-height: 600px; overflow-y: auto; position: relative">
+      <%# (2023..2025).reverse_each do |year| %>
+        <% year = 2025 %>
         <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
           <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
           <div class="row">
 
-            <!-- Sankranti - January -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm">
-                <div class="card-header bg-primary text-white">
-                  January <%= year %>
-                </div>
-                <div class="card-body">
-                  <%#= image_tag("sankranti.jpg", class: "img-fluid mb-2", alt: "Sankranti") %>
-                  <ul class="list-unstyled">
-                    <li><strong>📅 Jan 14:</strong> Sankranti Sambaralu</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Ugadi - March -->
             <div class="col-md-4 mb-4">
               <div class="card h-100 shadow-sm">
                 <div class="card-header bg-success text-white">
+                  Every Saturday Sri Venkateswara Pooja
+                </div>
+                <div class="card-body">
+                  <%= image_tag("year#{year}.png", class: "img-fluid mb-2", alt: "Sri Venkateswara Pooja", size: "200x200") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Every Saturday </strong> Sri Venkateswara Swamy Pooja(VSK) </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white">
                   March <%= year %>
                 </div>
                 <div class="card-body">
-                  <%#= image_tag("ugadi.jpg", class: "img-fluid mb-2", alt: "Ugadi") %>
+                  <%= image_tag("mar#{year}.jpg", class: "img-fluid mb-2", alt: "Samprokshana Abhishekam & Kumkumarchana") %>
                   <ul class="list-unstyled">
-                    <li><strong>📅 Mar 30:</strong> Ugadi Celebration</li>
+                    <li><strong>📅 Mar 30:</strong> Samprokshana Abhishekam & Kumkumarchana </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Diwali - November -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-success text-white">
+                  May <%= year %>
+                </div>
+                <div class="card-body">
+                  <%= image_tag("may#{year}.jpg", class: "img-fluid mb-2", alt: "Narasimha Jayanti", size: "200x200") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 May 5:</strong> Narasimha Jayanti </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div class="col-md-4 mb-4">
               <div class="card h-100 shadow-sm">
                 <div class="card-header bg-warning text-dark">
-                  November <%= year %>
+                  June <%= year %>
                 </div>
                 <div class="card-body">
-                  <%#= image_tag("diwali.jpg", class: "img-fluid mb-2", alt: "Diwali") %>
+                  <%#= image_tag("jun#{year}.jpg", class: "img-fluid mb-2", alt: "International Yoga Day") %>
                   <ul class="list-unstyled">
-                    <li><strong>📅 Nov 10:</strong> Diwali Celebrations</li>
+                    <li><strong>📅 Jun 21:</strong> International Yoga Day</li>
                   </ul>
                 </div>
               </div>
             </div>
 
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  Jul<%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("Jul#{year}.jpg", class: "img-fluid mb-2", alt: "Tholi Ekadasi") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Jul 06:</strong>Tholi Ekadasi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  Jul <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("Jul17#{year}.jpg", class: "img-fluid mb-2", alt: "Chinna Jeeyar Swamy's Visit Ekadasi") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Jul 17:</strong>Chinna Jeeyar Swamy's Visit Ekadasi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  Aug <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("Aug#{year}.jpg", class: "img-fluid mb-2", alt: "Sri Varalakshmi Vratam") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Aug :</strong>Sri Varalakshmi Vratam</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  Sep <%= year %>
+                </div>
+                <div class="card-body">
+                  <%= image_tag("ttd.jpeg", class: "img-fluid mb-2", alt: "TTD Srinivasa Kalyanam") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Sep :</strong>TTD Srinivasa Kalyanam</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  Nov <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("nov#{year}.jpg", class: "img-fluid mb-2", alt: "Diwali Celebrations") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Nov:</strong> Diwali Celebrations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      <% end %>
+      <%# end %>
     </div>
   </div>
 </div>
