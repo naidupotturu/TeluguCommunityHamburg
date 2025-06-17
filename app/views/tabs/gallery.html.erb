@@ -5,13 +5,13 @@
   </div>
 
   <div class="row">
-    <% @images = [] %>
+    <% @images = ["ttd.jpg"] %>
     <% @images.each do |img| %>
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
-          <%= image_tag img, class: "card-img-top", alt: "Event Photo" %>
+          <%= image_tag img, class: "card-img-top", size: "200x200", alt: "Event Photo" %>
           <div class="card-body text-center">
-            <p class="card-text text-muted">Event Title or Caption</p>
+            <p class="card-text text-muted">Srinivasa Abhisekam & Kukumarchana</p>
           </div>
         </div>
       </div>
