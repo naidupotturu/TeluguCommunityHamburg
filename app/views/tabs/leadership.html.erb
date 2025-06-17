@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2 class="text-center text-primary mb-4">Leadership Team</h2>
+
+  <div class="row">
+    <% leaders = [
+      { name: "Herr Rajendra Prasad Vatambeti", role: "President/Vorsitzender", image: "rajendra.jpg" },
+      { name: "Sita Rani", role: "Vice President", image: "sita.jpg" },
+      { name: "Anil Sharma", role: "Secretary", image: "anil.jpg" },
+      { name: "Kavitha Das", role: "Joint Secretary", image: "kavitha.jpg" },
+      { name: "Rajesh Verma", role: "Treasurer", image: "rajesh.jpg" },
+      { name: "Divya Rao", role: "Cultural Coordinator", image: "divya.jpg" },
+      { name: "Manoj Nair", role: "Media Coordinator", image: "manoj.jpg" },
+      { name: "Neha Joshi", role: "Youth Coordinator", image: "neha.jpg" },
+      { name: "Vikram Reddy", role: "Logistics Manager", image: "vikram.jpg" },
+      { name: "Swathi Iyer", role: "Community Liaison", image: "swathi.jpg" }
+    ] %>
+
+    <% leaders.each do |leader| %>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 text-center shadow-sm border-primary">
+          <%#= image_tag leader[:image], alt: leader[:name], class: "card-img-top", size: "300x300" %>
+          <div class="card-body">
+            <h5 class="card-title fw-bold"><%= leader[:name] %></h5>
+            <p class="card-text text-muted"><%= leader[:role] %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

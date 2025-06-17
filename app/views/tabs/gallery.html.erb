@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-primary">📸 Event Gallery</h2>
+    <p class="text-muted">A glimpse into our cultural celebrations and community moments.</p>
+  </div>
+
+  <div class="row">
+    <% @images = [] %>
+    <% @images.each do |img| %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <%= image_tag img, class: "card-img-top", alt: "Event Photo" %>
+          <div class="card-body text-center">
+            <p class="card-text text-muted">Event Title or Caption</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

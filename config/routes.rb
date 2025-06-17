@@ -25,6 +25,9 @@ Rails.application.routes.draw do
     get '/contact',     to: 'tabs#contact'
     get '/leadership',  to: 'tabs#leadership'
     get '/login',       to: 'sessions#new'
+    get '/login',       to: 'sessions#new'
+    post '/login',      to: 'sessions#create'
+    get '/signup',      to: 'users#new'
 
 
 end

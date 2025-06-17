@@ -1,61 +1,72 @@
-<div class="container my-5">
-  <h2 class="text-center text-primary mb-4">Event Calendar - 2025</h2>
-
+<div class="container-fluid mt-4">
   <div class="row">
-    <!-- January -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-header bg-primary text-white">
-          January 2025
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled">
-            <li><strong>📅 Jan 14:</strong> Sankranti Sambaralu</li>
-          </ul>
-        </div>
+    <!-- Left Side Year Buttons -->
+    <div class="col-md-3">
+      <div class="d-flex flex-column gap-2">
+        <% (2015..2025).reverse_each do |year| %>
+          <button class="btn btn-secondary text-white w-100"
+                  onclick="document.getElementById('year-<%= year %>').scrollIntoView({ behavior: 'smooth' });">
+            <%= year %>
+          </button>
+        <% end %>
       </div>
     </div>
 
-    <!-- March -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-header bg-primary text-white">
-          March 2025
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled">
-            <li><strong>📅 Mar 30:</strong> Ugadi Celebration</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <!-- Right Side Calendar -->
+    <div class="col-md-9" style="height: 600px; overflow-y: auto;">
+      <% (2015..2025).reverse_each do |year| %>
+        <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
+          <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
+          <div class="row">
 
-    <!-- June -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-header bg-primary text-white">
-          June 2025
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled">
-            <li><strong>📅 Jun 22:</strong> Sri Srinivasa Kalyanam</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <!-- Sankranti - January -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                  January <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("sankranti.jpg", class: "img-fluid mb-2", alt: "Sankranti") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Jan 14:</strong> Sankranti Sambaralu</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-    <!-- November -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-header bg-primary text-white">
-          November 2025
+            <!-- Ugadi - March -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-success text-white">
+                  March <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("ugadi.jpg", class: "img-fluid mb-2", alt: "Ugadi") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Mar 30:</strong> Ugadi Celebration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diwali - November -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  November <%= year %>
+                </div>
+                <div class="card-body">
+                  <%#= image_tag("diwali.jpg", class: "img-fluid mb-2", alt: "Diwali") %>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Nov 10:</strong> Diwali Celebrations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="card-body">
-          <ul class="list-unstyled">
-            <li><strong>📅 Nov 8:</strong> Deepavali Cultural Night</li>
-          </ul>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

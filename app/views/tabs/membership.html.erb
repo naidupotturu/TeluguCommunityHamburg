@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-primary">Become a Member</h2>
+    <p class="text-muted">
+      Join Telugu Community Hamburg e.V. and stay connected with your cultural roots while contributing to the local Telugu diaspora.
+    </p>
+  </div>
+
+  <div class="row">
+    <!-- Benefits Card -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          Membership Benefits
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Participate in cultural and religious events</li>
+            <li>Access Telugu language and Sanskrit classes</li>
+            <li>Exclusive member invitations and updates</li>
+            <li>Support Indo-German community integration</li>
+            <li>Volunteer and contribute to society</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Membership Form -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+          Membership Form
+        </div>
+        <div class="card-body">
+          <%= form_with url: users_path, method: :post, local: true do |f| %>
+            <div class="mb-3">
+              <%= f.label :name, "Full Name", class: "form-label" %>
+              <%= f.text_field :name, class: "form-control", required: true %>
+            </div>
+            <div class="mb-3">
+              <%= f.label :email, "Email", class: "form-label" %>
+              <%= f.email_field :email, class: "form-control", required: true %>
+            </div>
+            <div class="mb-3">
+              <%= f.label :phone, "Phone Number", class: "form-label" %>
+              <%= f.telephone_field :phone, class: "form-control" %>
+            </div>
+            <div class="mb-3">
+              <%= f.label :address, "Address", class: "form-label" %>
+              <%= f.text_area :address, class: "form-control", rows: 2 %>
+            </div>
+            <div class="d-grid">
+              <%= f.submit "Submit Membership", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
