@@ -3,22 +3,21 @@
 
   <div class="row">
     <% leaders = [
-      { name: "Herr Rajendra Prasad Vatambeti", role: "President/Vorsitzender", image: "rajendra.jpg" },
-      { name: "Sita Rani", role: "Vice President", image: "sita.jpg" },
-      { name: "Anil Sharma", role: "Secretary", image: "anil.jpg" },
-      { name: "Kavitha Das", role: "Joint Secretary", image: "kavitha.jpg" },
-      { name: "Rajesh Verma", role: "Treasurer", image: "rajesh.jpg" },
-      { name: "Divya Rao", role: "Cultural Coordinator", image: "divya.jpg" },
-      { name: "Manoj Nair", role: "Media Coordinator", image: "manoj.jpg" },
-      { name: "Neha Joshi", role: "Youth Coordinator", image: "neha.jpg" },
-      { name: "Vikram Reddy", role: "Logistics Manager", image: "vikram.jpg" },
-      { name: "Swathi Iyer", role: "Community Liaison", image: "swathi.jpg" }
+      { name: "Herr Rajendra Prasad Vatambeti", role: "Vorsitzender (Chairperson)", image: "president.jpeg" },
+      { name: "Herr Suman Chaganti", role: "Stellvertretender Vorsitzender (Vice Chairperson)", image: "vp.jpeg" },
+      { name: "Frau Srimadhavi Nakarikanti", role: "Generalsekretärin (General Secretary)", image: "gs.jpeg" },
+      { name: "Herr Kishore Kumar Dasugari", role: "Gemeinsamer Schriftführer (Joint Secretary)", image: "js.jpeg" },
+      { name: "Frau Syed Shahin Sulthana", role: "Schatzmeisterin (Treasurer)", image: "finance.jpeg" },
+      { name: "Herr Chanakya Vajjala", role: "Stellvertretender Schatzmeister (Deputy Treasurer)", image: "afc.jpeg" },
+      { name: "Frau Bharathi Vanganuru", role: "Sekretärin für kulturelle Angelegenheiten (Secretary for Cultural Affairs)", image: "c-co.jpeg" },
+      { name: "Herr Rajesh Reddy Gunda", role: "Referent für Offentichkeitsabeit (Public Relations Officer)", image: "pro.jpeg" },
+       { name: "Herr Bharath Reddy Inimerla", role: "Jungenwart (Youth Coordinator)", image: "sport.jpeg" }
     ] %>
 
     <% leaders.each do |leader| %>
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card h-100 text-center shadow-sm border-primary">
-          <%#= image_tag leader[:image], alt: leader[:name], class: "card-img-top", size: "300x300" %>
+          <%= image_tag leader[:image], alt: leader[:name], class: "card-img-top", size: "300x300" %>
           <div class="card-body">
             <h5 class="card-title fw-bold"><%= leader[:name] %></h5>
             <p class="card-text text-muted"><%= leader[:role] %></p>
