@@ -17,7 +17,7 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
   # Allow requests from this domain
-  config.hosts << "sakila-dashboard.onrender.com"
+  config.hosts << "telugucommunityhamburg.onrender.com"
 
 
   # Enable/disable caching. By default caching is disabled.
