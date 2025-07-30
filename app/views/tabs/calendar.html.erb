@@ -3,7 +3,7 @@
     <!-- Left Side Year Buttons -->
     <div class="col-md-3">
       <div class="d-flex flex-column gap-2">
-        <% (2015..2025).reverse_each do |year| %>
+        <% (2017..2025).reverse_each do |year| %>
           <button class="btn btn-secondary text-white w-100"
                   onclick="document.getElementById('year-<%= year %>').scrollIntoView({ behavior: 'smooth' });">
             <%= year %>
@@ -12,10 +12,10 @@
       </div>
     </div>
 
-    <!-- Right Side Calendar -->
+          <!-- Right Side Calendar -->
     <div class="col-md-9" style="min-height: 600px; overflow-y: auto; position: relative">
-      <%# (2023..2025).reverse_each do |year| %>
-        <% year = 2025 %>
+      <% (2025..2025).reverse_each do |year| %>
+        <%# year = 2025 %>
         <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
           <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
           <div class="row">
@@ -147,7 +147,149 @@
             </div>
           </div>
         </div>
-      <%# end %>
+      <% end %>
+          <% (2024..2024).reverse_each do |year| %>
+            <%# year = 2025 %>
+            <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
+              <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
+              <div class="row">
+
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                      February 2024
+                    </div>
+                    <div class="card-body">
+                      <%= image_tag("feb#{year}.jpeg", class: "img-fluid mb-2", alt: "Telugu Bala Levara", size: "300x300") %>
+                      <ul class="list-unstyled">
+                        <li> Telugu Bala Levara </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                      March <%= year %>
+                    </div>
+                    <div class="card-body">
+                      <%= image_tag("mar#{year}.jpeg", class: "img-fluid mb-2", alt: "Maha Shivaratri Pooja") %>
+                      <ul class="list-unstyled">
+                        <li>Maha Shivaratri Pooja</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                      Apr <%= year %>
+                    </div>
+                    <div class="card-body">
+                      <%= image_tag("apr#{year}.png", class: "img-fluid mb-2", alt: "Sri Sita Rama Kalyanam", size: "300x300") %>
+                      <ul class="list-unstyled">
+                        <li><strong>📅 Apr 28:</strong> First-ever Sri Sita Rama Kalyanam</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                      Nov <%= year %>
+                    </div>
+                    <div class="card-body">
+                      <%= image_tag("nov#{year}1.png", class: "img-fluid mb-2", alt: "TTD Samprokshana Abhishekam", size: "300x300")%>
+                      <ul class="list-unstyled">
+                        <li><strong>📅 Nov 21:</strong> TTD Samprokshana Abhishekam</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                      Nov <%= year %>
+                    </div>
+                    <div class="card-body">
+                      <%= image_tag("nov#{year}2.png", class: "img-fluid mb-2", alt: "Sri Srinivasa Kalyanam", size: "300x300")%>
+                      <ul class="list-unstyled">
+                        <li><strong>📅 Nov 23:</strong> Sri Srinivasa Kalyanam</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+            <% (2023..2023).reverse_each do |year| %>
+
+              <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
+                <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
+                <div class="row">
+
+
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                      <div class="card-header bg-primary text-white">
+                        March <%= year %>
+                      </div>
+                      <div class="card-body">
+                        <%= image_tag("mar#{year}.png", class: "img-fluid mb-2", alt: "Ugadi Celebrations") %>
+                        <ul class="list-unstyled">
+                          <li>Ugadi Celebrations</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                      <div class="card-header bg-warning text-dark">
+                        oct <%= year %>
+                      </div>
+                      <div class="card-body">
+                        <%= image_tag("oct#{year}.png", class: "img-fluid mb-2", alt: "Sri Srinivasa Kalyanam 2023", size: "300x300")%>
+                        <ul class="list-unstyled">
+                          <li><strong>📅 Oct 3:</strong> Sri Srinivasa Kalyanam</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+         <% (2020..2022).reverse_each do |year| %>
+
+        <div id="year-<%= year %>" class="mb-5 p-3 border rounded bg-light shadow-sm">
+          <h4 class="text-primary mb-4">Calendar - <%= year %></h4>
+          <div class="row">
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                  oct <%= year %>
+                </div>
+                <div class="card-body">
+                  <%= image_tag("oct#{year}.png", class: "img-fluid mb-2", alt: "Dasara  & Bathukamma", size: "300x300")%>
+                  <ul class="list-unstyled">
+                    <li><strong>📅 Oct:</strong> Dasara  & Bathukamma</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+
     </div>
   </div>
+</div>
 </div>
