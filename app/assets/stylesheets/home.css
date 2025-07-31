@@ -1,18 +1,25 @@
 
 
 .navbar, .bg-secondary{
-    background-color: #bd4752 !important;
+    background-color: rgba(30, 0, 60, 0.85)    !important;
 }
 body {
     background-color: aliceblue;
 }
-.header-background{
-    background-color: #bad4f7;
+
+.navbar a {
+    color: #ffffff;
+    font-weight: bold;
 }
 
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+
 .circle-image {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
 }
