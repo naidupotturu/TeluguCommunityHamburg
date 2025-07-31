@@ -4,7 +4,7 @@
     background-color: rgba(30, 0, 60, 0.85)    !important;
 }
 body {
-    background-color: aliceblue;
+    background-color: #dbdbe8;
 }
 
 .navbar a {
@@ -36,7 +36,7 @@ body {
     display: block;
 }
 footer {
-    background-color: #004187;
+    background-color: #4a148c;
     color: #f0f8ff;
     padding: 12px 0;
     font-size: 0.9rem;
