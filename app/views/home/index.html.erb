@@ -14,6 +14,9 @@
         <%= image_tag 'Seeta.jpg', class: "d-block w-100",  size: 800, alt: "Seeta Rama Kalyanam 2024" %>
       </div>
       <div class="carousel-item">
+        <%= video_tag 'Swami-idiols.mp4', class: "d-block w-100", size: 800, autoplay: true, loop: true, muted: true, playsinline: true %>
+      </div>
+      <div class="carousel-item">
         <%= video_tag 'slide_vedio4.mp4', class: "d-block w-100", size: 800, autoplay: true, loop: true, muted: true, playsinline: true %>
       </div>
       <div class="carousel-item">
@@ -40,6 +43,55 @@
     </a>
   </div>
 </div>
+
+<div id="flyerModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.7); display:flex; justify-content:center; align-items:flex-start; z-index:1000; padding:2rem 1rem;">
+
+  <div style="position:relative; max-width:500px; width:90%; margin-top:5%; text-align:center;">
+
+    <!-- Close button -->
+    <button id="closeModal" style="position:absolute; top:-10px; right:-10px; background:red; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer;">&times;</button>
+
+    <!-- Flyer image -->
+    <a href="https://buytickets.at/telugucommunityhamburg/1825398" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/flyer-TTD-2025.jpeg"
+           alt="Telugu Community Hamburg Flyer"
+           style="width:100%; height:auto; display:block; border:2px solid #ccc; border-radius:8px;">
+    </a>
+
+    <!-- Enroll button -->
+    <a href="https://buytickets.at/telugucommunityhamburg/1825398" target="_blank"
+       class="btn btn-primary mt-3"
+       style="font-size:1.5rem; padding:0.75rem 2rem; display:inline-block;">
+      Enroll
+    </a>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById('flyerModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    // Show modal on page load
+    modal.style.display = 'flex';
+
+    // Close modal on click of close button
+    closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') modal.style.display = 'none';
+    });
+
+    // Close modal on clicking outside the modal content
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  });
+</script>
+
 
 
 
