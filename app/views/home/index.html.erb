@@ -46,26 +46,20 @@
 
 <div id="flyerModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
   background:rgba(0,0,0,0.7); display:flex; justify-content:center; align-items:flex-start; z-index:1000; padding:2rem 1rem;">
-
-  <div style="position:relative; max-width:500px; width:90%; margin-top:5%; text-align:center;">
-
+  <div style="position:relative; max-width:30%; margin-top:5%;">
     <!-- Close button -->
     <button id="closeModal" style="position:absolute; top:-10px; right:-10px; background:red; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer;">&times;</button>
 
     <!-- Flyer image -->
     <a href="https://buytickets.at/telugucommunityhamburg/1825398" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/flyer-TTD-2025.png"
-           alt="TTD Sri Srinivasa Kalyanam - 2025"
-           style="width:100%; height:auto; display:block; border:2px solid #ccc; border-radius:8px;">
+      <%= image_tag "flyer-TTD-2025.png", style: "width:100%; height:auto; display:block; border:2px solid #ccc; border-radius:8px;" %>
     </a>
 
     <!-- Enroll button -->
     <a href="https://buytickets.at/telugucommunityhamburg/1825398" target="_blank"
-       class="btn btn-primary mt-3"
-       style="font-size:1.5rem; padding:0.75rem 2rem; display:inline-block;">
+       class="btn btn-primary mt-3 btn-xl" style="width:150px; display:block; margin:1rem auto; font-size:2rem;">
       Enroll
     </a>
-
   </div>
 </div>
 
